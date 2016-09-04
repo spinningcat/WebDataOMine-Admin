@@ -1,10 +1,2 @@
-adium-theme-ubuntu==0.3.4
 beautifulsoup4==4.4.1
-chardet==2.3.0
 Django==1.10.1
-gyp==0.1
-html5lib==0.999
-lxml==3.5.0
-numpy==1.11.0
-six==1.10.0
-unity-lens-photos==1.0
