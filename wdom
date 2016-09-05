@@ -28,7 +28,7 @@ if [ ! -e ./bin/activate ] || [ ! -e ./bin/pip3 ] || [ ! -e ./bin/python3 ] || [
 else
   echo Enviroment setup is already done
   if [ "$1" == "run" ]; then
-    sudo ./bin/python3 app.py
+    sudo ./bin/python3 app.py dev
   elif [ "$1" == "install" ] && [ "$2" != "" ]; then
     sudo ./bin/pip3 install $2
     sudo ./bin/pip3 freeze > requirements.txt
