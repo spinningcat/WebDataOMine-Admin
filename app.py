@@ -1,7 +1,7 @@
 from flask import Flask
 import sys
 
-devMode = len(sys.argv) > 1 and sys.argv[1] == "dev"
+port = 8080 if len(sys.argv) > 1 and sys.argv[1] == "dev" else 80
 app = Flask(__name__)
 
 @app.route("/")
@@ -10,7 +10,5 @@ def index():
 
 
 if __name__ == "__main__":
-    if devMode:
-        app.run(port=8080)
-    else:
-        app.run(port=80)
+    print("Listening port " + str(port))
+    app.run(port=port)
