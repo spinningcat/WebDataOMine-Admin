@@ -2,7 +2,7 @@ from flask import Flask
 import sys
 import os
 
-port = port = int(os.environ.get("PORT", 8080)) 
+port = int(os.environ.get("PORT", 8080))
 app = Flask(__name__)
 
 @app.route("/")
@@ -12,4 +12,4 @@ def index():
 
 if __name__ == "__main__":
     print("Listening port " + str(port))
-    app.run(port=port)
+    app.run(host='0.0.0.0',port=port)
