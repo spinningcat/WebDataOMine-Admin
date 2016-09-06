@@ -1,7 +1,8 @@
 from flask import Flask
 import sys
+import os
 
-port = 8080 if len(sys.argv) > 1 and sys.argv[1] == "dev" else 80
+port = port = int(os.environ.get("PORT", 8080)) 
 app = Flask(__name__)
 
 @app.route("/")
